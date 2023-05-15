@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Cancer API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<body>
+ <div class="Model">
+	<h2>Survival Chance Prediction</h2>
+
+    <form id="cancerForm" action="{{ url_for('predict')}}" method="post">
+        <div class="Combo">
+            <label for="grade">Choose a Cancer Grade:
+                <select name="grade" id="grade" class="box",required ="required">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                </select>
+            </label>
+    </div>
+    <label for="tumorSize"> 
+        Tumor Size
+        <input type="text" name="tumorSize" placeholder="Tumor Size" required="required" />
+    </label>
+
+        <div class="Combo">
+            <label for="estStatus">Estrogen Status
+                <select name="estStatus" id="estStatus" class="box",required ="required">
+                    <option value="1">Positive</option>
+                    <option value="2">Negative</option>
+                </select>
+            </label>
+        </div>
+
+        <label for="posNode">
+            Positive Nodes
+            <input type="text" name="posNode" placeholder="No of positive nodes" required="required" />
+        </label>
+        <br>
+        <label for="survivalMonth">
+            Months Survived
+            <input type="text" name="survivalMonth" placeholder="No of months survived" required="required" />
+        </label>
+        <br>
+        <button type="submit" class="predictBtn">Predict</button>
+    </form>
+
+   <br>
+   <div id="text">
+        {{ prediction_text }}
+    </div>
+
+ </div>
+
+
+</body>
+</html>
