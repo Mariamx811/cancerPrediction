@@ -11,5 +11,5 @@ used data which mentions the symptoms of the patient.
   <li>SVM</li>
   <li>Naive Bayes</li>
 </ul>
-<p>We found the model with the best accuracy which was Random Forest which was 92% , So we Deployed it using Flask
+<p>We found the model with the best accuracy which was Random Forest which was 96% , So we Deployed it using Flask
 Made a website to take the sympoms of the patient and predict whether they will live or die.</p>
