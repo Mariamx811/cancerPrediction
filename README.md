@@ -1,4 +1,4 @@
-# cancerPrediction
+# Breast Cancer Prediction
 <h2> Description </h2>
 <p>The project is to Predict whether the patient will die because of breast cancer or not 
 used data which mentions the symptoms of the patient.
